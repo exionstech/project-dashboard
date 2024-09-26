@@ -23,6 +23,7 @@ import {
   Link2,
   Globe,
   ExternalLink,
+  Home,
 } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -36,9 +37,20 @@ import {
 } from "@/components/ui/card";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import Logo from "../global/Logo";
 
 export default function Sidebar() {
   const sidebarLinks = [
+    {
+      title: "Dashboard",
+      link: [
+        {
+          title: "Overview",
+          href: "/dashboard/overview",
+          icon: Home,
+        }
+      ],
+    },
     {
       title: "Clients & Projects",
       link: [
@@ -172,10 +184,7 @@ export default function Sidebar() {
     <div className="hidden border-r bg-muted/40 md:block">
       <div className="flex h-full max-h-screen flex-col gap-2">
         <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
-          <Link href="/" className="flex items-center gap-2 font-semibold">
-            <Globe className="h-6 w-6" /> {/* Icon for Logo */}
-            <span className="">Acme Inc</span>
-          </Link>
+          <Logo href="/dashboard" title="Project Pro"/>
           <Button variant="outline" size="icon" className="ml-auto h-8 w-8">
             <Bell className="h-4 w-4" />
             <span className="sr-only">Toggle notifications</span>
@@ -186,7 +195,7 @@ export default function Sidebar() {
         <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
             {sidebarLinks.map((section, i) => (
               <div key={i}>
-                <div className="text-muted-foreground mb-2 font-semibold">
+                <div className="text-muted-foreground mb-2 font-bold ">
                   {section.title}
                 </div>
                 {section.link.map((item, j) => {

@@ -30,22 +30,19 @@ export default async function Home() {
         </div>
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Build it over the weekend and launch on Monday.
+            Manage Projects & Clients effectively
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 mb-4">
-            This Next Js Boilerplate is a comprehensive and modern starting
-            point, packed with all the features you need to quickly build your
-            SaaS, AI tool, or any web app, helping you make your first earnings
-            online faster.
+            Our comprehensive Project Management System streamlines your workflow,empowering teams to collaborate effectively and deliver results on time.Start boosting your Productivity today.
           </p>
-          <CustomLinkButton title="Go to Dashboard" href="/dashboard" />
+          <CustomLinkButton title="Start a Free Trial" href="/login" />
           <div className="pt-8 pb-4 flex items-center  justify-center gap-8">
             <div className="">
               <AnimatedAvatars />
             </div>
             <div className="">
               <StarRating count={5} />
-              <p className="dark:text-slate-900">{count} developers use it.</p>
+              <p className="dark:text-slate-900">{count} + teams delevering projects faster</p>
             </div>
           </div>
         </div>
